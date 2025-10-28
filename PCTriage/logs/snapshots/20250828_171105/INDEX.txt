@@ -1,0 +1,11 @@
+﻿Snapshot: 20250828_171105
+OutputDir: C:\Users\wille\Desktop\CodeFiles\triage\logs\snapshots\20250828_171105
+
+Key files:
+- processes.csv, net-tcp.csv, services.csv, drivers.csv
+- installed-programs.csv
+- scheduled-tasks.csv, scheduled-actions.csv
+- defender-status.xml, defender-prefs.xml, defender-exclusions.csv, securitycenter-av.csv
+- ipconfig.txt, routes.txt, arp.txt, hosts.txt
+- firewall-rules.csv, proxy.txt, lsa.txt
+

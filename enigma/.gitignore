@@ -1,0 +1,18 @@
+node_modules/
+dist/
+dist-electron/
+dist-build/
+build/
+*.log
+.DS_Store
+.vscode/
+
+# Template files
+file_structure.txt
+merged-codebase.txt
+
+# Template scripts
+cleanup.ps1
+Merge-Codebase.ps1
+Rename-ToTS.ps1
+Write-Tree.ps1

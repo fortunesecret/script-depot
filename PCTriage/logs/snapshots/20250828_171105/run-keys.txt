@@ -1,0 +1,70 @@
+﻿[HKLM:\Software\Microsoft\Windows\CurrentVersion\Run]
+
+
+SecurityHealth         : C:\Windows\system32\SecurityHealthSystray.exe
+RtkAudUService         : "C:\Windows\System32\DriverStore\FileRepository\realtekservice.inf_amd64_a92c6a36ec21763b\RtkA
+                         udUService64.exe" -background
+SteelSeriesGG          : "C:\Program Files\SteelSeries\GG\SteelSeriesGG.exe" -dataPath="C:\ProgramData\SteelSeries\GG" 
+                         -dbEnv=production -auto=true
+AdobeGCInvoker-1.0     : "C:\Program Files (x86)\Common Files\Adobe\AdobeGCClient\AGCInvokerUtility.exe"
+AdobeAAMUpdater-1.0    : "C:\Program Files (x86)\Common Files\Adobe\OOBE\PDApp\UWA\UpdaterStartupUtility.exe"
+Corsair iCUE5 Software : "C:\Program Files\Corsair\Corsair iCUE5 Software\Corsair iCUE5 Software\iCUE Launcher.exe" 
+                         --autorun
+Greenshot              : C:\Program Files\Greenshot\Greenshot.exe
+PSPath                 : Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersi
+                         on\Run
+PSParentPath           : Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersi
+                         on
+PSChildName            : Run
+PSDrive                : HKLM
+PSProvider             : Microsoft.PowerShell.Core\Registry
+
+
+
+
+
+
+[HKCU:\Software\Microsoft\Windows\CurrentVersion\Run]
+
+
+OneDrive                                                 : "C:\Users\wille\AppData\Local\Microsoft\OneDrive\OneDrive.ex
+                                                           e" /background
+Battle.net                                               : "C:\Program Files (x86)\Battle.net\Battle.net.exe" 
+                                                           --autostarted
+Steam                                                    : "C:\Program Files (x86)\Steam\steam.exe" -silent
+TSMApplication                                           : "C:\Program Files (x86)\TradeSkillMaster 
+                                                           Application\app\TSMApplication.exe"
+JetBrains Toolbox                                        : "C:\Users\wille\AppData\Local\JetBrains\Toolbox\bin\jetbrain
+                                                           s-toolbox.exe" --minimize
+Discord                                                  : "C:\Users\wille\AppData\Local\Discord\Update.exe" 
+                                                           --processStart Discord.exe
+MicrosoftEdgeAutoLaunch_C663672F86DEAD8ABE72D62D55FD5CBD : "C:\Program Files 
+                                                           (x86)\Microsoft\Edge\Application\msedge.exe" 
+                                                           --no-startup-window --win-session-start
+Adobe Acrobat Synchronizer                               : "C:\Program Files\Adobe\Acrobat 
+                                                           DC\Acrobat\AdobeCollabSync.exe"
+electron.app.CurseForge                                  : C:\Users\wille\AppData\Local\Programs\CurseForge 
+                                                           Windows\CurseForge.exe --minimized
+Synapse3                                                 : C:\Program Files (x86)\Razer\Synapse3\WPFUI\Framework\Razer 
+                                                           Synapse 3 Host\Razer Synapse 3.exe /StartMinimized
+PSPath                                                   : Microsoft.PowerShell.Core\Registry::HKEY_CURRENT_USER\Softwa
+                                                           re\Microsoft\Windows\CurrentVersion\Run
+PSParentPath                                             : Microsoft.PowerShell.Core\Registry::HKEY_CURRENT_USER\Softwa
+                                                           re\Microsoft\Windows\CurrentVersion
+PSChildName                                              : Run
+PSDrive                                                  : HKCU
+PSProvider                                               : Microsoft.PowerShell.Core\Registry
+
+
+
+
+
+
+[HKLM:\Software\Microsoft\Windows\CurrentVersion\RunOnce]
+
+
+
+[HKCU:\Software\Microsoft\Windows\CurrentVersion\RunOnce]
+
+
+

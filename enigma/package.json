@@ -1,0 +1,39 @@
+{
+  "name": "enigma",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Electron + Vite + TypeScript template",
+  "main": "dist-electron/main.cjs",
+  "directories": {
+    "doc": "docs"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "start": "npm run build && electron dist-electron/main.cjs",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^38.3.0",
+    "electron-better-ipc": "^2.0.1",
+    "electron-log": "^5.4.3",
+    "electron-store": "^11.0.2",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@types/node": "^24.9.1",
+    "electron-builder": "^26.0.12",
+    "typescript": "^5.9.3",
+    "vite": "^7.1.11",
+    "vite-plugin-electron": "^0.29.0",
+    "vite-plugin-electron-renderer": "^0.14.6"
+  }
+}

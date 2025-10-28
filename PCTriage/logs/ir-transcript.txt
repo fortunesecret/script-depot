@@ -1,0 +1,176 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20250828162934
+Username: MSI\wille
+RunAs User: MSI\wille
+Configuration Name: 
+Machine: MSI (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 4356
+PSVersion: 5.1.22621.5697
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.22621.5697
+BuildVersion: 10.0.22621.5697
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Root: C:\Users\wille\Desktop\CodeFiles\triage
+Logs: C:\Users\wille\Desktop\CodeFiles\triage\logs
+Tools: C:\Users\wille\Desktop\CodeFiles\triage\tools
+==> Snapshot
+PS>TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+PS C:\Users\wille\Desktop\CodeFiles\triage> .\run.ps1 -Snapshot
+Root: C:\Users\wille\Desktop\CodeFiles\triage
+Logs: C:\Users\wille\Desktop\CodeFiles\triage\logs
+Tools: C:\Users\wille\Desktop\CodeFiles\triage\tools
+==> Snapshot
+PS C:\Users\wille\Desktop\CodeFiles\triage> TerminatingError(ForEach-Object): "You cannot call a method on a null-valued expression."
+>> TerminatingError(ForEach-Object): "You cannot call a method on a null-valued expression."
+>> TerminatingError(ForEach-Object): "You cannot call a method on a null-valued expression."
+Snapshot complete: C:\Users\wille\Desktop\CodeFiles\triage\logs\snapshots\20250828_163505
+<== Snapshot OK (00:00:18.8438952)
+Done. Transcript: C:\Users\wille\Desktop\CodeFiles\triage\logs\ir-transcript.txt
+PS C:\Users\wille\Desktop\CodeFiles\triage> .\run.ps1 -Snapshot -Recon
+Root: C:\Users\wille\Desktop\CodeFiles\triage
+Logs: C:\Users\wille\Desktop\CodeFiles\triage\logs
+Tools: C:\Users\wille\Desktop\CodeFiles\triage\tools
+==> Snapshot
+PS C:\Users\wille\Desktop\CodeFiles\triage> TerminatingError(ForEach-Object): "You cannot call a method on a null-valued expression."
+>> TerminatingError(ForEach-Object): "You cannot call a method on a null-valued expression."
+>> TerminatingError(ForEach-Object): "You cannot call a method on a null-valued expression."
+Snapshot complete: C:\Users\wille\Desktop\CodeFiles\triage\logs\snapshots\20250828_163633
+<== Snapshot OK (00:00:13.5761387)
+==> Recon
+Recon complete: C:\Users\wille\Desktop\CodeFiles\triage\logs\recon\20250828_163647
+<== Recon OK (00:00:02.1862470)
+Done. Transcript: C:\Users\wille\Desktop\CodeFiles\triage\logs\ir-transcript.txt
+PS C:\Users\wille\Desktop\CodeFiles\triage> .\run.ps1 -Snapshot -Recon
+At C:\Users\wille\Desktop\CodeFiles\triage\run.ps1:151 char:7
++       ?? (Join-Path $Logs ("snapshots\" + $RunId)) `
++       ~~
+Unexpected token '??' in expression or statement.
+
+At C:\Users\wille\Desktop\CodeFiles\triage\run.ps1:158 char:7
++       ?? (Join-Path $Logs ("recon\" + $RunId)) `
++       ~~
+Unexpected token '??' in expression or statement.
+
+At C:\Users\wille\Desktop\CodeFiles\triage\run.ps1:175 char:7
++       ?? (Get-LatestChildDir (Join-Path $Logs 'defender'))
++       ~~
+Unexpected token '??' in expression or statement.
+
+At C:\Users\wille\Desktop\CodeFiles\triage\run.ps1:181 char:7
++       ?? (Get-LatestChildDir (Join-Path $Logs 'msert'))
++       ~~
+Unexpected token '??' in expression or statement.
+    + CategoryInfo          : ParserError: (:) [], ParseException
+    + FullyQualifiedErrorId : UnexpectedToken
+At C:\Users\wille\Desktop\CodeFiles\triage\run.ps1:151 char:7
++       ?? (Join-Path $Logs ("snapshots\" + $RunId)) `
++       ~~
+Unexpected token '??' in expression or statement.
+
+At C:\Users\wille\Desktop\CodeFiles\triage\run.ps1:158 char:7
++       ?? (Join-Path $Logs ("recon\" + $RunId)) `
++       ~~
+Unexpected token '??' in expression or statement.
+
+At C:\Users\wille\Desktop\CodeFiles\triage\run.ps1:175 char:7
++       ?? (Get-LatestChildDir (Join-Path $Logs 'defender'))
++       ~~
+Unexpected token '??' in expression or statement.
+
+At C:\Users\wille\Desktop\CodeFiles\triage\run.ps1:181 char:7
++       ?? (Get-LatestChildDir (Join-Path $Logs 'msert'))
++       ~~
+Unexpected token '??' in expression or statement.
+    + CategoryInfo          : ParserError: (:) [], ParseException
+    + FullyQualifiedErrorId : UnexpectedToken
+
+PS C:\Users\wille\Desktop\CodeFiles\triage> .\run.ps1 -Snapshot -Recon
+Root: C:\Users\wille\Desktop\CodeFiles\triage
+Logs: C:\Users\wille\Desktop\CodeFiles\triage\logs
+Tools: C:\Users\wille\Desktop\CodeFiles\triage\tools
+RunId: 20250828_170321
+Bundle: C:\Users\wille\Desktop\CodeFiles\triage\output\20250828_170321
+==> Snapshot
+PS C:\Users\wille\Desktop\CodeFiles\triage> TerminatingError(snapshot.ps1): "A parameter cannot be found that matches parameter name 'RunId'."
+>> TerminatingError(snapshot.ps1): "A parameter cannot be found that matches parameter name 'RunId'."
+<!! Snapshot FAILED: A parameter cannot be found that matches parameter name 'RunId'.
+==> Recon
+Recon complete: C:\Users\wille\Desktop\CodeFiles\triage\logs\recon\20250828_170321
+<== Recon OK (00:00:01.9322486)
+Bundling Recon -> C:\Users\wille\Desktop\CodeFiles\triage\output\20250828_170321\Recon
+Bundle ZIP: C:\Users\wille\Desktop\CodeFiles\triage\output\IR_20250828_170321.zip
+Done. Bundle folder: C:\Users\wille\Desktop\CodeFiles\triage\output\20250828_170321
+Transcript: C:\Users\wille\Desktop\CodeFiles\triage\logs\ir-transcript.txt
+PS C:\Users\wille\Desktop\CodeFiles\triage> .\run.ps1 -Snapshot -Recon
+Root: C:\Users\wille\Desktop\CodeFiles\triage
+Logs: C:\Users\wille\Desktop\CodeFiles\triage\logs
+Tools: C:\Users\wille\Desktop\CodeFiles\triage\tools
+RunId: 20250828_170429
+Bundle: C:\Users\wille\Desktop\CodeFiles\triage\output\20250828_170429
+==> Snapshot
+PS C:\Users\wille\Desktop\CodeFiles\triage> TerminatingError(ForEach-Object): "You cannot call a method on a null-valued expression."
+>> TerminatingError(ForEach-Object): "You cannot call a method on a null-valued expression."
+>> TerminatingError(ForEach-Object): "You cannot call a method on a null-valued expression."
+Snapshot complete: C:\Users\wille\Desktop\CodeFiles\triage\logs\snapshots\20250828_170429
+<== Snapshot OK (00:00:13.8678243)
+==> Recon
+Recon complete: C:\Users\wille\Desktop\CodeFiles\triage\logs\recon\20250828_170429
+<== Recon OK (00:00:01.7702487)
+Bundling Snapshot -> C:\Users\wille\Desktop\CodeFiles\triage\output\20250828_170429\Snapshot
+Bundling Recon -> C:\Users\wille\Desktop\CodeFiles\triage\output\20250828_170429\Recon
+Bundle ZIP: C:\Users\wille\Desktop\CodeFiles\triage\output\IR_20250828_170429.zip
+Done. Bundle folder: C:\Users\wille\Desktop\CodeFiles\triage\output\20250828_170429
+Transcript: C:\Users\wille\Desktop\CodeFiles\triage\logs\ir-transcript.txt
+PS C:\Users\wille\Desktop\CodeFiles\triage> .\run.ps1 -Snapshot -Recon
+Root: C:\Users\wille\Desktop\CodeFiles\triage
+Logs: C:\Users\wille\Desktop\CodeFiles\triage\logs
+Tools: C:\Users\wille\Desktop\CodeFiles\triage\tools
+RunId: 20250828_170955
+Bundle: C:\Users\wille\Desktop\CodeFiles\triage\output\20250828_170955
+==> Snapshot
+PS C:\Users\wille\Desktop\CodeFiles\triage> TerminatingError(ForEach-Object): "Exception calling "Join" with "2" argument(s): "Value cannot be null.
+Parameter name: values""
+>> TerminatingError(ForEach-Object): "Exception calling "Join" with "2" argument(s): "Value cannot be null.
+Parameter name: values""
+Snapshot complete: C:\Users\wille\Desktop\CodeFiles\triage\logs\snapshots\20250828_170955
+<== Snapshot OK (00:00:13.1126715)
+==> Recon
+Recon complete: C:\Users\wille\Desktop\CodeFiles\triage\logs\recon\20250828_170955
+<== Recon OK (00:00:01.8385968)
+Bundling Snapshot -> C:\Users\wille\Desktop\CodeFiles\triage\output\20250828_170955\Snapshot
+Bundling Recon -> C:\Users\wille\Desktop\CodeFiles\triage\output\20250828_170955\Recon
+Bundle ZIP: C:\Users\wille\Desktop\CodeFiles\triage\output\IR_20250828_170955.zip
+Done. Bundle folder: C:\Users\wille\Desktop\CodeFiles\triage\output\20250828_170955
+Transcript: C:\Users\wille\Desktop\CodeFiles\triage\logs\ir-transcript.txt
+PS C:\Users\wille\Desktop\CodeFiles\triage> .\run.ps1 -Snapshot -Recon
+Root: C:\Users\wille\Desktop\CodeFiles\triage
+Logs: C:\Users\wille\Desktop\CodeFiles\triage\logs
+Tools: C:\Users\wille\Desktop\CodeFiles\triage\tools
+RunId: 20250828_171105
+Bundle: C:\Users\wille\Desktop\CodeFiles\triage\output\20250828_171105
+==> Snapshot
+PS C:\Users\wille\Desktop\CodeFiles\triage> TerminatingError(ForEach-Object): "Exception calling "Join" with "2" argument(s): "Value cannot be null.
+Parameter name: values""
+>> TerminatingError(ForEach-Object): "Exception calling "Join" with "2" argument(s): "Value cannot be null.
+Parameter name: values""
+Snapshot complete: C:\Users\wille\Desktop\CodeFiles\triage\logs\snapshots\20250828_171105
+<== Snapshot OK (00:00:13.2526130)
+==> Recon
+Recon complete: C:\Users\wille\Desktop\CodeFiles\triage\logs\recon\20250828_171105
+<== Recon OK (00:00:01.7243313)
+Bundling Snapshot -> C:\Users\wille\Desktop\CodeFiles\triage\output\20250828_171105\Snapshot
+Bundling Recon -> C:\Users\wille\Desktop\CodeFiles\triage\output\20250828_171105\Recon
+Bundle ZIP: C:\Users\wille\Desktop\CodeFiles\triage\output\IR_20250828_171105.zip
+Done. Bundle folder: C:\Users\wille\Desktop\CodeFiles\triage\output\20250828_171105
+Transcript: C:\Users\wille\Desktop\CodeFiles\triage\logs\ir-transcript.txt

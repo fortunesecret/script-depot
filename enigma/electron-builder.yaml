@@ -1,0 +1,16 @@
+appId: com.example.enigma
+productName: Enigma
+files:
+  - dist/**
+  - dist-electron/**
+  - node_modules/**
+  - package.json
+directories:
+  output: dist-build
+  buildResources: build
+win:
+  target: nsis
+mac:
+  category: public.app-category.developer-tools
+linux:
+  target: AppImage

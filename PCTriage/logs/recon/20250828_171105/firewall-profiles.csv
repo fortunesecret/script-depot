@@ -1,0 +1,4 @@
+﻿"Name","Enabled","DefaultInboundAction","DefaultOutboundAction","NotifyOnListen","AllowInboundRules","AllowLocalFirewallRules"
+"Domain","True","NotConfigured","NotConfigured","True","NotConfigured","NotConfigured"
+"Private","True","NotConfigured","NotConfigured","True","NotConfigured","NotConfigured"
+"Public","True","NotConfigured","NotConfigured","True","NotConfigured","NotConfigured"
