@@ -1,0 +1,81 @@
+# ==========================================
+# Script Depot - .gitattributes
+# ==========================================
+# Purpose:
+#   Ensure cross-platform consistency in line endings, encoding, and diffing.
+#   PowerShell scripts, JSON configs, and Markdown are normalized as UTF-8 text.
+#   Binary and generated artifacts are excluded from diffs and merges.
+
+# --- Global Settings ---
+# Normalize all text files to LF line endings in repo, auto-convert on checkout.
+* text=auto eol=lf
+
+# --- PowerShell ---
+# Always UTF-8 (no BOM), use text diff
+*.ps1 text working-tree-encoding=UTF-8 eol=lf diff
+*.psm1 text working-tree-encoding=UTF-8 eol=lf diff
+*.psd1 text working-tree-encoding=UTF-8 eol=lf diff
+
+# --- JSON & Config Files ---
+*.json text working-tree-encoding=UTF-8 eol=lf diff
+*.config text working-tree-encoding=UTF-8 eol=lf diff
+*.yaml text working-tree-encoding=UTF-8 eol=lf diff
+*.yml  text working-tree-encoding=UTF-8 eol=lf diff
+
+# --- Markdown / Docs ---
+*.md text working-tree-encoding=UTF-8 eol=lf diff=markdown
+*.txt text working-tree-encoding=UTF-8 eol=lf diff
+
+# --- Scripts / Shells ---
+*.sh text working-tree-encoding=UTF-8 eol=lf diff
+*.ps1xml text working-tree-encoding=UTF-8 eol=lf diff
+
+# --- Batch / Command Files ---
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# --- Logs, Outputs, Binaries (no diff) ---
+*.log binary
+*.bak binary
+*.zip binary
+*.7z  binary
+*.tar binary
+*.gz  binary
+*.rar binary
+*.dll binary
+*.exe binary
+*.pdb binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.webp binary
+*.pdf binary
+*.so binary
+*.a binary
+*.wasm binary
+
+# --- Ignore generated output diffs ---
+merged-codebase.txt -diff
+file_structure.txt -diff
+*_output.txt -diff
+*_tree.txt -diff
+
+# --- Git Merge Behavior ---
+# JSON and config files use text merges (avoid binary conflicts)
+*.json merge=text
+*.yml  merge=text
+*.yaml merge=text
+
+# --- Enforce LF for scripts ---
+# These ensure no accidental CRLF commit noise from Windows editors.
+*.ps1 text eol=lf
+*.psm1 text eol=lf
+*.psd1 text eol=lf
+
+# --- Notes ---
+# This setup ensures PowerShell scripts stay clean across platforms:
+# - UTF-8 encoded
+# - LF line endings in repo (converted automatically on checkout)
+# - Binary outputs excluded from diffs
