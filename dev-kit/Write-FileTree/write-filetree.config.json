@@ -1,0 +1,27 @@
+{
+  "output": {
+    "directory": ".",
+    "filename": "file_structure.txt",
+    "encoding": "utf8",
+    "newLine": "CRLF",
+    "overwrite": true
+  },
+  "tree": {
+    "asciiBranches": false,
+    "includeHidden": false,
+    "maxDepth": 2147483647,
+    "sortDirsFirst": true,
+    "showSymlinkInfo": true
+  },
+  "exclude": {
+    "namePatterns": [
+      "node_modules",
+      ".git",
+      ".vs",
+      "bin",
+      "obj",
+      "packages"
+    ],
+    "globs": []
+  }
+}

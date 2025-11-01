@@ -1,0 +1,67 @@
+{
+  "root": "",
+  "output": {
+    "directory": ".",
+    "filename": "merged-codebase.txt",
+    "encoding": "utf8",
+    "headerBar": "==========",
+    "showGeneratedTimestamp": true
+  },
+  "scan": {
+    "directories": [],
+    "extensions": []
+  },
+  "excludes": {
+    "directoryNames": [
+      "node_modules",
+      "dist",
+      "dist-electron",
+      "dist-build",
+      "build",
+      ".git",
+      ".turbo",
+      ".next",
+      ".vite",
+      ".cache",
+      "out"
+    ],
+    "globs": [
+      "coverage/**",
+      "**/*.map",
+      "**/*.min.*",
+      "**/.DS_Store",
+      "**/Thumbs.db",
+      "**/*.png",
+      "**/*.jpg",
+      "**/*.jpeg",
+      "**/*.gif",
+      "**/*.webp",
+      "**/*.svg",
+      "**/*.ico",
+      "**/*.pdf",
+      "**/*.zip",
+      "**/*.7z",
+      "**/*.rar",
+      "**/*.exe",
+      "**/*.dll",
+      "**/*.so",
+      "**/*.a",
+      "**/*.wasm",
+      "package-lock.json",
+      "yarn.lock",
+      "pnpm-lock.yaml",
+      "bun.lockb"
+    ]
+  },
+  "forceInclude": {
+    "globs": []
+  },
+  "behavior": {
+    "followSymlinks": false,
+    "maxFileSizeKB": 1024,
+    "detectBinary": true,
+    "sortMode": "path",
+    "addSectionSpacer": true,
+    "newLine": "CRLF"
+  }
+}
