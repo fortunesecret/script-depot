@@ -531,10 +531,10 @@ function Invoke-CompareReport([string]$RunDir) {
     if (Test-Path $generateReportPath) {
       Write-Log -Message "Running Generate-Report.ps1 for run dir: $RunDir ..." -LogPath $logPath
       
-      # Run the Generate-Report.ps1 script with the RunDir, Interval, and SampleLength parameters
+      # Run the Generate-Report.ps1 script with the RunDir parameter
       $oldWhatIf = $WhatIfPreference
       $WhatIfPreference = $false
-      & $generateReportPath -RunDir $RunDir -Interval $IntervalSeconds -SampleLength $DurationSeconds
+      & $generateReportPath -RunDir $RunDir
       $WhatIfPreference = $oldWhatIf
       
       $htmlPath = Join-Path $RunDir "compare-report.html"

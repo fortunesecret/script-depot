@@ -1,6 +1,6 @@
 # Wifi-Optimize Suite
 
-A collection of PowerShell scripts for diagnosing and optimizing Wi-Fi connections on Windows.
+A collection of PowerShell scripts for diagnosing and optimizing Wi-Fi connections on Windows. This suite provides tools for monitoring Wi-Fi performance, applying optimizations, and generating detailed reports.
 
 ## Scripts
 
@@ -59,14 +59,11 @@ Generates HTML and JSON reports for Wi-Fi monitoring results:
 # Examples
 .\Generate-Report.ps1                                # Uses latest run
 .\Generate-Report.ps1 -RunDir "$HOME\WifiSuite\20251101-121027"
-.\Generate-Report.ps1 -Interval 1 -SampleLength 180  # Specify interval and sample length
 ```
 
-#### Parameters
+**Parameters:**
 
 - **RunDir**: Directory containing pre/post monitor CSVs (optional, auto-detects latest if omitted)
-- **Interval**: Sampling interval in seconds (default: 1)
-- **SampleLength**: Duration of monitoring in seconds (default: 180)
 
 ### Get-WifiAdapterReport.ps1
 
@@ -85,33 +82,34 @@ Collects Wi-Fi adapter configuration and capabilities:
 .\Get-WifiAdapterReport.ps1 -InterfaceName "Wi-Fi 2"
 ```
 
-## Modules
+## Modular Architecture
 
-The suite has been refactored to use modular PowerShell modules:
+The suite has been refactored to use a modular architecture with PowerShell modules:
 
 ### WifiUtils.psm1
 
 Common utility functions:
 
-- Type conversion functions
-- Logging functions
-- File operations
-- Execution helpers
+- Type conversion functions (ConvertTo-Date, ConvertTo-Int, ConvertTo-Bool)
+- Logging functions (Write-Log, Write-Info, Write-Warn, Write-Err)
+- File operations (Import-CsvSafe, Save-Json)
+- Execution helpers (Invoke-SafeCommand, Test-IsAdmin)
 
 ### WifiDataProcessing.psm1
 
 Data processing functions:
 
-- Ping statistics
-- Capture summary
-- Delta reporting
-- Chart data generation
+- Ping statistics (Get-PingStats, Get-LongestFailStreak)
+- Capture summary (Get-CaptureSummary)
+- Delta reporting (Get-DeltaReport)
+- Chart data generation (Get-ChartData)
+- Analysis (Get-Verdict)
 
 ### HtmlTemplates.psm1
 
 HTML templates for reports:
 
-- Compare report HTML template
+- Compare report HTML template (Get-CompareReportHtml)
 
 ## Requirements
 

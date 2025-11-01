@@ -1,30 +1,12 @@
 # Script to generate a report for a specific run directory
+[CmdletBinding()]
 param(
-    [Parameter(Mandatory=$false)]
-    [string]$RunDir,
-    
-    [Parameter(Mandatory=$false)]
-    [int]$Interval = 1,
-    
-    [Parameter(Mandatory=$false)]
-    [int]$SampleLength = 180
+    [string]$RunDir
 )
 
 # Display the parameters
 Write-Host "Parameters:" -ForegroundColor Cyan
 Write-Host "  RunDir: $RunDir"
-Write-Host "  Interval: $Interval seconds"
-Write-Host "  SampleLength: $SampleLength seconds"
-
-# Note about sample length
-if ($SampleLength -lt 60) {
-    Write-Host "Warning: Sample length of $SampleLength seconds might be too short for reliable results." -ForegroundColor Yellow
-    Write-Host "Recommended minimum is 60 seconds." -ForegroundColor Yellow
-} elseif ($SampleLength -gt 300) {
-    Write-Host "Note: Sample length of $SampleLength seconds is quite long. This will take a while to complete." -ForegroundColor Yellow
-} else {
-    Write-Host "Sample length of $SampleLength seconds should provide good results." -ForegroundColor Green
-}
 
 # Import the modules
 $modulesPath = Join-Path $PSScriptRoot "Modules"
@@ -108,14 +90,14 @@ Write-Host "`n=== Compare-Monitors ===`n" -ForegroundColor Cyan
 Write-Host ("Pre:  {0} -> {1}  (samples={2}, duration={3}s)" -f $preSumm.start, $preSumm.end, $preSumm.samples, $preSumm.durationSec)
 Write-Host ("Post: {0} -> {1}  (samples={2}, duration={3}s)`n" -f $postSumm.start, $postSumm.end, $postSumm.samples, $postSumm.durationSec)
 
-function Show-Block($title, $pre, $post) {
+function Write-SignalBlock($title, $pre, $post) {
   Write-Host ("-- {0} --" -f $title) -ForegroundColor Yellow
   ("{0,-18} {1,8}   ->   {2,-8}   (Delta {3})" -f "Signal avg %", $pre.signal.avg, $post.signal.avg, ($post.signal.avg - $pre.signal.avg))
   ("{0,-18} {1,8}   ->   {2,-8}   (Delta {3})" -f "Signal min %", $pre.signal.min, $post.signal.min, ($post.signal.min - $pre.signal.min))
   ("{0,-18} {1,8}   ->   {2,-8}   (Delta {3})" -f "Signal max %", $pre.signal.max, $post.signal.max, ($post.signal.max - $pre.signal.max))
   Write-Host ""
 }
-Show-Block "Signal" $preSumm $postSumm
+Write-SignalBlock "Signal" $preSumm $postSumm
 
 Write-Host "-- Local (192.168.1.1) --" -ForegroundColor Yellow
 ("{0,-18} {1,8}% -> {2,-8}% (Delta {3}%)" -f "Loss", $preSumm.local.lossPct, $postSumm.local.lossPct, ($postSumm.local.lossPct - $preSumm.local.lossPct))
